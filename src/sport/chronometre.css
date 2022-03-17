@@ -1,0 +1,40 @@
+.demarrer{
+   
+    margin: auto;
+  
+    margin-top: 20px;
+}
+.bouton_menu{
+    display: flex;
+    flex-direction: row;
+    
+  
+    margin: auto;
+   margin-top: 60px;
+    
+}
+.timer{
+   
+    margin: auto;
+    
+    margin-top: 20px;
+
+}
+ .timer_p{
+    font-size: 3em;
+    background: #0000005e;
+    width: 312px;
+    margin: auto;
+}
+.container{
+   border:white solid 4px;
+    width: 400px;
+  
+    height: 400px;
+    border-radius: 100%;
+    padding: 40px;
+    padding-top: 80px;
+}
+svg{
+    white-space: inherit;
+}

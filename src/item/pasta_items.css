@@ -1,0 +1,21 @@
+.img_pasta_item {
+	height: 150px;
+	width: 220px;
+	border-radius: 20px;
+}
+
+.pasta_item {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-transform: capitalize;
+    border-radius: 20px;
+    background: #285656;
+    color:white;
+    font-size: 20px;
+}
+.cuisson_afffichage{
+    display: flex;
+}
+

@@ -1,0 +1,29 @@
+
+
+#choix1{
+
+    width:20px;
+    float:left;
+}
+#choix1:hover{
+
+    width:20px;
+    transform: scale(1.5);
+    transition: 0.4s ease;
+}
+.div_radio_superieur{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    
+    
+
+
+}
+.div_radio_inferieur {
+    display: flex;
+    align-items: center;
+}
