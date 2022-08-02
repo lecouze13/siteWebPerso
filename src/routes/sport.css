@@ -1,0 +1,51 @@
+.pompe {
+    background-size: cover;
+    height: 180px;
+}
+
+.Haut_du_corp_exo {
+    margin: auto;
+
+}
+
+.Haut_du_corp_exo_tableau {
+    margin: auto;
+
+}
+
+
+label {
+    float: none
+}
+
+.button_submit_rep {}
+
+.rep_div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.button_Hdc,
+.button_Bdc {
+    width: 40%;
+    margin: auto;
+    margin-top: 10%;
+    height: 12vw;
+}
+
+.choix_button {
+    display: flex;
+}
+
+.main_button_choix {
+    background-color: #457790;
+    width: 50%;
+    height: 30vw;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 2%;
+    padding: 25px;
+}

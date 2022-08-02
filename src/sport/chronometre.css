@@ -38,3 +38,9 @@
 svg{
     white-space: inherit;
 }
+.minuteur{
+    background-color: blue;
+    width: 300px;
+    
+    margin: auto;
+}

@@ -1,0 +1,95 @@
+.demarrer {
+
+    margin: auto;
+
+    margin-top: 20px;
+}
+
+.bouton_menu_min {
+    display: flex;
+    flex-direction: row;
+
+
+    margin: auto;
+
+
+}
+
+.timer {
+
+    margin: auto;
+
+    margin-top: 20px;
+
+}
+
+.timer_p {
+    font-size: 3em;
+    background: #0000005e;
+    width: 312px;
+    margin: auto;
+}
+
+.container {
+    border: white solid 4px;
+    width: 400px;
+
+    height: 400px;
+    border-radius: 100%;
+    padding: 40px;
+    padding-top: 80px;
+}
+
+svg {
+    white-space: inherit;
+}
+
+.minuteur {
+    background-color: blue;
+    width: 300px;
+
+    margin: auto;
+}
+
+.up {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: -21px;
+}
+
+svg {
+    white-space: inherit;
+
+}
+
+p.timer_p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.point {
+    margin-top: 44px;
+}
+
+svg.bi.bi-caret-up-square {
+    margin-top: -14px;
+    transform: scale(1.5);
+}
+
+.bouton_up {
+    height: 30%;
+}
+
+.texte_bouton_up {
+    -moz-user-select: none;
+    /* Firefox */
+    -webkit-user-select: none;
+    /* Chrome, Safari, Opéra depuis la version 15 */
+    -ms-user-select: none;
+    /* Internet explorer depuis la version 10 et Edge */
+    user-select: none;
+    /* Propriété standard */
+}

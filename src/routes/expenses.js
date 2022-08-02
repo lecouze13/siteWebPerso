@@ -16,7 +16,7 @@ import Header from '../header/header';
 // import Chart from 'chart.js/auto'
 
 
-var test = new Array();
+var test = [];
 
 
 
@@ -69,11 +69,12 @@ export default function Expenses() {
     }
     var connecter_localStorage = localStorage.getItem("key")
 
-    const btc_data = new Array();
+
 
 
     useEffect(() => {
         const url = 'https://api.coindesk.com/v1/bpi/currentprice.json';
+        const btc_data = [];
         axios.get(url).then((response) => {
 
 
@@ -214,3 +215,6 @@ export default function Expenses() {
     );
 
 }
+
+
+
