@@ -39,7 +39,7 @@ export const Chronometre = () => {
 
                 }
                 if (cmpt % 100 === 0) {
-                    setCounter((setCounter) => setCounter + 1)
+                    setCounter((counter) => counter + 1)
 
                     setMiliseconde(0)
                     setMiliseconde2(0)
@@ -107,7 +107,7 @@ export const Chronometre = () => {
 
     return (
         <main>
-            <h2>Bonjour voici un chronometre avec plusieur fonctionnalite</h2>
+
             <div className='container'>
                 <div className='timer'></div><p className='timer_p'> {minute}  :{seconde2}{counter} : {miliseconde2}{miliseconde}</p>
                 <div className='bouton_menu'>
@@ -115,7 +115,9 @@ export const Chronometre = () => {
                     <button className='demarrer' onClick={pause}>Pause</button>
                     <button className='demarrer' onClick={Reset}>Reset</button>
                 </div>
+
             </div>
+
 
         </main>
     )
