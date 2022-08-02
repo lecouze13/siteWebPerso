@@ -25,18 +25,36 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
         return { name, poids }
     }
     const [data, setData] = useState([])
-    const [test, setTest] = useState()
+    const verif_poids = JSON.parse(localStorage.getItem('Poids'));
+    var bool_verif_data = 0;
+    if (verif_poids === null) {
+        const dataf = [
+            {
+                name: TodayDate,
+                poids: Poids_input,
 
+            },
+
+        ]
+
+        localStorage.setItem("Poids", JSON.stringify(dataf))
+        bool_verif_data = 1
+    }
     useEffect(() => {
+
         const data = JSON.parse(localStorage.getItem('Poids'));
-        if (data) {
+        if (data)
             setData(data);
+        else {
+
         }
-        if (Poids_input != null) {
+        if (verif_poids != null && bool_verif_data == 1) {
             data.push(createData(TodayDate, Poids_input))
             localStorage.removeItem("Poids")
             localStorage.setItem("Poids", JSON.stringify(data))
         }
+
+        console.log(data)
     }, []);
 
     return (
