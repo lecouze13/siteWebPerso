@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
 
-// import { Minuteur } from '../sport/minuteur pm;foiêfokje^fle$kfe$'
-
+// import { Minuteur } from '../sport/minuteur pm^fle$kfe$'
+//test
 import { GRAFFE_POIDS } from "./GRAFFE_POIDS";
 
 export const EXO_BASDUCORPS = () => {
