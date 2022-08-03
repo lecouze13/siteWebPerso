@@ -1,14 +1,14 @@
 
 import { useState, useEffect } from 'react';
 
-// import './GRAFFE_POIDS.css'
+import './GRAFFE_POIDS.css'
 
 import React, { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
 
-
+var bool_verif_data;
 
 
 
@@ -26,7 +26,7 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
     }
     const [data, setData] = useState([])
     const verif_poids = JSON.parse(localStorage.getItem('Poids'));
-    var bool_verif_data = 0;
+
     if (verif_poids === null) {
         const dataf = [
             {
@@ -38,7 +38,7 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
         ]
 
         localStorage.setItem("Poids", JSON.stringify(dataf))
-        bool_verif_data = 1
+        bool_verif_data = 0
     }
     useEffect(() => {
 
@@ -48,12 +48,13 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
         else {
 
         }
-        if (verif_poids != null && bool_verif_data == 1) {
+        if (verif_poids != null) {
             data.push(createData(TodayDate, Poids_input))
             localStorage.removeItem("Poids")
             localStorage.setItem("Poids", JSON.stringify(data))
         }
 
+        console.log(data)
         console.log(data)
     }, []);
 
@@ -61,15 +62,10 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
         <div className='main_poids'>
 
             <LineChart
-                width={500}
-                height={300}
+                width={1000}
+                height={600}
                 data={data}
-                margin={{
-                    top: 5,
-                    right: 30,
-                    left: 20,
-                    bottom: 5
-                }}
+
             >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
