@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import './chronometre.css'
 import './EXO_HAUTDUCORPS.css'
-// import { Minuteur } from '../sport/minuteur'
+import { Chronometre } from '../sport/chronometre'
 import pompe_PS from "../image/Pompe_PS.png";
 import { Tableau } from "./tableau";
 import { delay } from 'lodash';
@@ -169,6 +169,7 @@ export const EXO_HAUTDUCORPS = () => {
 
 
             {Suivant ? (<div className="Haut_du_corp_exo">
+                <Chronometre />
                 {Suivant1 ? (<div>
                     <form onSubmit={handleSubmit}>
 
