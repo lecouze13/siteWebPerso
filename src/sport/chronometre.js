@@ -59,7 +59,7 @@ export const Chronometre = () => {
                     setseconde2(0)
                 }
 
-                console.log(cmpt)
+
 
             }, 10);
         } else {
@@ -100,7 +100,7 @@ export const Chronometre = () => {
             setisset(false)
         }
         else {
-            console.log(" le chronometre n'est pas activer")
+
         }
 
     }

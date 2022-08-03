@@ -54,8 +54,7 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
             localStorage.setItem("Poids", JSON.stringify(data))
         }
 
-        console.log(data)
-        console.log(data)
+
     }, []);
 
     return (
