@@ -55,33 +55,39 @@ export const Tableau = ({ var1 }) => {
 
 
     const verif_exo = JSON.parse(localStorage.getItem('dataHDC'));
-
-    if (verif_exo === null) {
-        const dataf = [
-            {
-                name: TodayDate,
-
-                exo1: var1[0],
-                exo2: var1[1],
-                exo3: var1[2],
-                exo4: var1[3],
-                exo5: var1[4],
-                exo6: var1[5],
-                exo7: var1[6],
-                exo8: var1[7],
-                exo9: var1[8],
-                exo10: var1[9],
-                exo11: var1[10],
-                exo12: var1[11],
-            },
-
-        ]
-
-        localStorage.setItem("dataHDC", JSON.stringify(dataf))
-        bool = 1
+    if (var1.length === 0) {
 
     }
+    else {
 
+
+        if (verif_exo === null) {
+            const dataf = [
+                {
+                    name: TodayDate,
+
+                    exo1: var1[0],
+                    exo2: var1[1],
+                    exo3: var1[2],
+                    exo4: var1[3],
+                    exo5: var1[4],
+                    exo6: var1[5],
+                    exo7: var1[6],
+                    exo8: var1[7],
+                    exo9: var1[8],
+                    exo10: var1[9],
+                    exo11: var1[10],
+                    exo12: var1[11],
+                },
+
+            ]
+
+            localStorage.setItem("dataHDC", JSON.stringify(dataf))
+            bool = 1
+
+        }
+    }
+    console.log(var1.length)
 
     useEffect(() => {
         const rows = JSON.parse(localStorage.getItem('dataHDC'));
@@ -90,7 +96,7 @@ export const Tableau = ({ var1 }) => {
         }
 
         if (verif_exo != null) {
-            if (bool === 1) {
+            if (bool === 1 || var1.length === 0) { // pour ne pas reafficher des ligne si on affiche tab
 
             }
             else {
