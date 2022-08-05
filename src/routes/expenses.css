@@ -1,22 +1,9 @@
-nav {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    justify-content: center;
-}
-.menue{
-    text-decoration: none;
-    font-size: 1.2em;
-    
-}
-a.menue {
-    margin-right: 50px;
-}
-main{
+main {
 
     text-align: center;
 }
-.header{
+
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -24,7 +11,11 @@ main{
     border-bottom: 2px solid;
     align-items: center;
 }
-tr /* Toutes les cellules des tableaux... */
-{
-    border: 1px solid black; /* auront une bordure de 1px */
+
+tr
+
+/* Toutes les cellules des tableaux... */
+    {
+    border: 1px solid black;
+    /* auront une bordure de 1px */
 }

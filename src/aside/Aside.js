@@ -28,7 +28,7 @@ export const Aside = ({ handleChange1, value, checked, handleChange_checkbox, ch
 
         </main>
     ) : (
-        <aside>
+        <aside className='aside_selecteur_pates'>
             <button className='bouton_croix' onClick={() => setopen(true)}>
                 <img id="croix" src={croix} alt=" croix"></img>
             </button>
@@ -65,13 +65,13 @@ export const Aside = ({ handleChange1, value, checked, handleChange_checkbox, ch
                 </ol>
 
                 <ol>
-                    <div>
+                    {/* <div>
                         <input type="range" id="volume" name="volume"
                             min="0" max="100" step="1" value={valRange} onChange={handlechangeRange}></input>
                         <label for="volume">Volume ={valRange}</label>
-                    </div>
+                    </div> */}
                 </ol>
-                <ol>
+                {/* <ol>
                     test 1
                 </ol>
                 <ol>
@@ -85,7 +85,7 @@ export const Aside = ({ handleChange1, value, checked, handleChange_checkbox, ch
                 </ol>
                 <ol>
                     test 1
-                </ol>
+                </ol> */}
             </ul>
 
 
