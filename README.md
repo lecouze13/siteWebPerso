@@ -1,3 +1,3 @@
 
-bug raffrachit le tableau  f= ligne vide
 
+faire tous les media queries pour tel 

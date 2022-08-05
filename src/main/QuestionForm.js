@@ -32,9 +32,7 @@ function QuestionForm({ setActiveCategory, categories, activeCategory }) {
 
 
 
-                <button className="btn btn-outline-success my-2 my-sm-0"
-                    onClick={() => setActiveCategory('')}>Reset
-                </button>
+
             </div>
 
         </div>

@@ -4,9 +4,33 @@ import { useState } from 'react';
 import './chronometre.css'
 import './EXO_HAUTDUCORPS.css'
 import { Chronometre } from '../sport/chronometre'
-import pompe_PS from "../image/Pompe_PS.png";
+
 import { Tableau } from "./tableau";
 import { delay } from 'lodash';
+
+
+import Pompe_ms from '../image/muscu/Pompe_MS.jfif'
+import Pompe from '../image/muscu/Pompe Classique.png'
+import pompe_PS from "../image/muscu/Pompe_PS.png";
+import Dips from '../image/muscu/Dips.gif'
+import Traction_Pronation from '../image/muscu/Traction Pronation.png'
+import Traction_Supination from '../image/muscu/Traction_supination.webp'
+import Superman from '../image/muscu/Superman.webp'
+import Curl_biceps from '../image/muscu/Curl_biceps.webp'
+import Curl_marteau from '../image/muscu/Curl_marteau.webp'
+import Developper_militaire from '../image/muscu/Developper_militaire.webp'
+import elevation_laterale from '../image/muscu/Elevations-laterales.webp'
+
+
+
+
+
+
+
+
+
+
+
 export const EXO_HAUTDUCORPS = () => {
 
     // function createData(name, exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9) {
@@ -173,7 +197,7 @@ export const EXO_HAUTDUCORPS = () => {
                 {Suivant1 ? (<div>
                     <form onSubmit={handleSubmit}>
 
-                        <h2>Pompe Main surrelever</h2>
+                        <h2>Pompe Pieds surrelever</h2>
                         <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
@@ -199,7 +223,7 @@ export const EXO_HAUTDUCORPS = () => {
                     <form onSubmit={handleSubmit}>
 
                         <h2>Pompe classique</h2>
-                        <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
+                        <img className="pompe" src={Pompe} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
 
@@ -219,8 +243,8 @@ export const EXO_HAUTDUCORPS = () => {
                 {Suivant3 ? (<div>
                     <form onSubmit={handleSubmit}>
 
-                        <h2>Pompe pieds surrelever</h2>
-                        <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
+                        <h2>Pompe Main surrelever</h2>
+                        <img className="pompe" src={Pompe_ms} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
 
@@ -239,7 +263,7 @@ export const EXO_HAUTDUCORPS = () => {
                     <form onSubmit={handleSubmit}>
 
                         <h2>Dips</h2>
-                        <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
+                        <img className="pompe" src={Dips} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
 
@@ -256,8 +280,9 @@ export const EXO_HAUTDUCORPS = () => {
                 {Suivant5 ? (<div>
                     <form onSubmit={handleSubmit}>
 
-                        <h2>exo dos 1</h2>
-                        <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
+                        <h2> Traction Pronation
+                        </h2>
+                        <img className="pompe" src={Traction_Pronation} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
 
@@ -275,8 +300,8 @@ export const EXO_HAUTDUCORPS = () => {
                 {Suivant6 ? (<div>
                     <form onSubmit={handleSubmit}>
 
-                        <h2>exo dos 2</h2>
-                        <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
+                        <h2>Traction Supination</h2>
+                        <img className="pompe" src={Traction_Supination} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
 
@@ -289,12 +314,16 @@ export const EXO_HAUTDUCORPS = () => {
                 ) : (<div></div>)}
             </div>
 
+
+
+
+
             <div className="Haut_du_corp_exo">
                 {Suivant7 ? (<div>
                     <form onSubmit={handleSubmit}>
 
                         <h2>Superman</h2>
-                        <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
+                        <img className="pompe" src={Superman} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
 
@@ -312,7 +341,7 @@ export const EXO_HAUTDUCORPS = () => {
                     <form onSubmit={handleSubmit}>
 
                         <h2>curl biceps</h2>
-                        <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
+                        <img className="pompe" src={Curl_biceps} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
 
@@ -330,7 +359,7 @@ export const EXO_HAUTDUCORPS = () => {
                     <form onSubmit={handleSubmit}>
 
                         <h2>curl marteau</h2>
-                        <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
+                        <img className="pompe" src={Curl_marteau} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
 
@@ -348,7 +377,7 @@ export const EXO_HAUTDUCORPS = () => {
                     <form onSubmit={handleSubmit}>
 
                         <h2>developper militaire</h2>
-                        <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
+                        <img className="pompe" src={Developper_militaire} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
 
@@ -367,7 +396,7 @@ export const EXO_HAUTDUCORPS = () => {
                     <form onSubmit={handleSubmit}>
 
                         <h2>exo epaule 2 </h2>
-                        <img className="pompe" src={pompe_PS} alt="pompe spike"></img>
+                        <img className="pompe" src={elevation_laterale} alt="pompe spike"></img>
                         <div className="rep_div">
                             <label for="nb_rep"> Nombres de rep :</label>
 

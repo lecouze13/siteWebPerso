@@ -1,7 +1,7 @@
 .img_pasta_item {
-	height: 150px;
-	width: 220px;
-	border-radius: 20px;
+    height: 150px;
+    width: 220px;
+    border-radius: 20px;
 }
 
 .pasta_item {
@@ -12,10 +12,42 @@
     text-transform: capitalize;
     border-radius: 20px;
     background: #285656;
-    color:white;
+    color: white;
     font-size: 20px;
 }
-.cuisson_afffichage{
+
+.cuisson_afffichage {
     display: flex;
 }
 
+@media (max-width: 870px) {
+
+    .pasta_item {}
+
+    .img_pasta_item {
+        height: 126px;
+        width: 164px;
+    }
+
+    .items {
+        width: 185px;
+    }
+}
+
+@media (max-width: 500px) {
+
+
+    .pasta_item {
+        font-size: 15px;
+    }
+
+    .img_pasta_item {
+        height: 74px;
+        width: 111px;
+    }
+
+    .items {
+        width: 132px;
+    }
+
+}
