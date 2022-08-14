@@ -1,0 +1,55 @@
+.img_echauf {
+    width: 500px;
+    height: 400px;
+}
+
+.container_echauff {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    margin-top: 40px;
+    background-color: rgb(67 131 161);
+    color: white;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.container_echauff h2 {
+
+    font-size: 33px;
+    margin-bottom: 25px;
+
+}
+
+.timer_echauff {
+    font-size: 3em;
+    background: #0000005e;
+    width: 312px;
+    margin: auto;
+}
+
+@media (max-width: 650px) {
+    .container_echauff {
+        width: 300px;
+        height: 300px;
+    }
+
+    .img_echauf {
+        width: 250px;
+        height: 200px;
+    }
+
+    .container_echauff h2 {
+
+        font-size: 20px;
+        margin-bottom: 2px;
+
+    }
+
+    .timer_echauff {
+        font-size: 1.5em;
+
+        width: 200px;
+        margin-top: -15px;
+    }
+}

@@ -4,6 +4,8 @@ import { useState } from 'react';
 import './chronometre.css'
 import './EXO_HAUTDUCORPS.css'
 import { Chronometre } from '../sport/chronometre'
+import { Echauffement } from '../sport/Echauffement'
+
 
 import { Tableau } from "./tableau";
 import { delay } from 'lodash';
@@ -47,7 +49,17 @@ export const EXO_HAUTDUCORPS = () => {
 
 
 
+
+    const [echauff, setechauff] = useState(false);
+    const echauff_trigger = () => {
+        setechauff(true);
+
+    }
+
+
     const [Suivant1, setSuivant1] = useState(false);
+
+
     const [Suivant2, setSuivant2] = useState(false);
     const [Suivant3, setSuivant3] = useState(false);
     const [Suivant4, setSuivant4] = useState(false);
@@ -179,9 +191,22 @@ export const EXO_HAUTDUCORPS = () => {
 
     return (
 
+
         <div className="Haut_du_corp_div">
 
+            {echauff ? (<div>
+                <Echauffement Miliseconde={1}
+                    Miliseconde2={0}
+                    Seconde={0}
+                    Seconde2={0}
+                    Minute={4}
+                />
+            </div>
+            ) : (<div> <button onClick={echauff_trigger}>Echauffement</button></div>)}
+
+
             <div className="Haut_du_corp_exo_tableau">
+
                 {Suivant13 ? (<div>
                     <Tableau
                         var1={Tab_rep}
