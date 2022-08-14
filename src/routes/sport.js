@@ -1,12 +1,14 @@
 
 
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
+
 import './invoices.css';
 import './sport.css'
 import { GlobalStyles } from '../theme/GlobalStyles';
 import { useTheme } from '../theme/useTheme';
 import { Chronometre } from '../sport/chronometre'
+
 // import { Minuteur } from '../sport/minuteur'
 import { ThemeProvider } from "styled-components";
 // import pompe_PS from "../image/Pompe_PS.png";
@@ -61,8 +63,8 @@ export default function Invoices() {
 
 
 
-
     return (
+
         <main>
             {
                 themeLoaded && <ThemeProvider theme={selectedTheme}>
@@ -78,6 +80,7 @@ export default function Invoices() {
             }
             <Header />
             <Outlet />
+
             {begin ? (
 
 
@@ -96,7 +99,9 @@ export default function Invoices() {
                 <div className="choix_button">
                     <button className="button_Hdc" onClick={Haut_du_corp}><h3> Haut du corps</h3></button>
                     <button className="button_Bdc" onClick={Bas_du_corp}> <h3>Bas du corps</h3></button>
+
                 </div>
+                <a target="_blank" className="link_kcal" href="https://lorenzo-geano-etu.pedaweb.univ-amu.fr/Projet_importants/muscu.php">Liens vers le calculateur de kcal</a>
             </div >)
             }
 

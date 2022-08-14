@@ -5,3 +5,16 @@
 .btn_submit_div {
     margin-top: 25px;
 }
+
+
+@media (max-width: 510px) {
+
+    .pompe {
+        width: 250px;
+        height: 130px;
+    }
+
+    .form {
+        height: 300px;
+    }
+}

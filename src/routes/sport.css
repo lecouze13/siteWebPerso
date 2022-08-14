@@ -18,7 +18,7 @@ label {
     float: none
 }
 
-.button_submit_rep {}
+
 
 .rep_div {
     display: flex;
@@ -33,7 +33,7 @@ label {
     width: 40%;
     margin: auto;
     margin-top: 10%;
-    height: 12vw;
+    height: 200px;
 }
 
 .choix_button {
@@ -42,10 +42,56 @@ label {
 
 .main_button_choix {
     background-color: #457790;
-    width: 50%;
-    height: 30vw;
+    width: 1000px;
+    height: 500px;
     margin: auto;
     margin-top: 100px;
     border-radius: 2%;
     padding: 25px;
+}
+
+.link_kcal {
+    margin-top: 200px;
+}
+
+@media (max-width: 900px) {
+    .main_button_choix {
+
+        width: 500px;
+        height: 300px;
+        margin-top: 50px;
+
+    }
+
+    .button_Hdc,
+    .button_Bdc {
+
+
+
+        height: 115px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .main_button_choix {
+
+        width: 300px;
+        height: 200px;
+        margin-top: 25px;
+        padding: 5px;
+    }
+
+    .button_Hdc,
+    .button_Bdc {
+
+        margin-top: 10px;
+        width: 45%;
+        height: 115px;
+    }
+
+    .main_button_choix h2 {
+        font-size: 17px;
+        margin-top: 5px;
+    }
 }
