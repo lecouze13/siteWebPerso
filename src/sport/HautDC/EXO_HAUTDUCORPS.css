@@ -1,0 +1,40 @@
+.btn_submit_div {}
+
+.Haut_du_corp_div_choix {
+
+    margin: auto;
+    margin-top: 20%;
+}
+
+.margin_button_entrainement {
+    width: 100%;
+}
+
+@media (max-width: 510px) {
+
+    .pompe {
+        width: 250px;
+        height: 130px;
+    }
+
+    .form {
+        height: 300px;
+    }
+
+}
+
+@media (min-width: 800px) {
+    .Haut_du_corp_div_choix {
+        max-width: 600px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+    }
+
+    .margin_button_entrainement {
+
+        height: 200px;
+        font-size: 30px;
+    }
+
+}

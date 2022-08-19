@@ -115,7 +115,7 @@ export default function Expenses() {
 
 
     test = JSON.parse(localStorage.getItem("databtc"));
-    console.log(test)
+
 
 
     // const state = {
