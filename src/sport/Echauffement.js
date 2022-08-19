@@ -11,12 +11,15 @@ import coudes from '../image/echauff/cercle de coudes.gif'
 import poigne from '../image/echauff/cercle de poignes.gif'
 import genou from '../image/echauff/coude au genou.jpg'
 import gainage from '../image/echauff/squat a position pompe a gainage.png'
+import ReactAudioPlayer from 'react-audio-player';
+import music1 from '../audio/music1Sport.mp3'
 
 
 
 // import './Echauffement.css'
 let cmpt = 0
-export const Echauffement = ({ Miliseconde, Miliseconde2, Seconde, Seconde2, Minute }) => {
+export const Echauffement = ({ Miliseconde, Miliseconde2, Seconde, Seconde2, Minute,
+    handle_traing_hdc }) => {
 
     const [counter, setCounter] = useState(Seconde);
     const [miliseconde, setMiliseconde] = useState(Miliseconde);
@@ -102,10 +105,13 @@ export const Echauffement = ({ Miliseconde, Miliseconde2, Seconde, Seconde2, Min
                         setCounter(9)
                         setseconde2(5)
                     }
-                    if (cmpt === 10) {
+                    if (cmpt === 1) {
 
                         setimage8(true)
                         setimage7(false)
+
+
+
                     }
 
 
@@ -154,7 +160,7 @@ export const Echauffement = ({ Miliseconde, Miliseconde2, Seconde, Seconde2, Min
                 else {
                     Reset();
                 }
-            }, 1);
+            }, 10);
         } else {
             clearInterval(intervalle);
 
@@ -201,88 +207,110 @@ export const Echauffement = ({ Miliseconde, Miliseconde2, Seconde, Seconde2, Min
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
     return (
-        <main className='container_echauff'>
+        <div>
+            <ReactAudioPlayer
+                src={music1}
+                autoPlay
+                controls
+
+            />
+            <main className='container_echauff'>
 
 
 
+                {/* // partie audio */}
 
 
-            {image1 ? (<div className='div_img_echauff'>
+                {image1 ? (<div className='div_img_echauff'>
 
 
-                <h2>jumping jack</h2>
-                <img className="img_echauf" src={jumping_jack} alt="jumping jack"></img>
+                    <h2>jumping jack</h2>
+                    <img className="img_echauf" src={jumping_jack} alt="jumping jack"></img>
 
-            </div>
-            ) : (<div></div>)}
+                </div>
+                ) : (<div></div>)}
 
-            {image2 ? (<div className='div_img_echauff'>
-
-
-                <h2>cercle de nuques</h2>
-                <img className="img_echauf" src={nuques} alt="cercle de nuques"></img>
-
-            </div>
-            ) : (<div></div>)}
-
-            {image3 ? (<div>
+                {image2 ? (<div className='div_img_echauff'>
 
 
-                <h2>cercle d'epaules    </h2>
-                <img className="img_echauf" src={epaules} alt="cercle d'epaules"></img>
+                    <h2>cercle de nuques</h2>
+                    <img className="img_echauf" src={nuques} alt="cercle de nuques"></img>
 
-            </div>
-            ) : (<div></div>)}
+                </div>
+                ) : (<div></div>)}
 
-            {image4 ? (<div>
-
-
-                <h2>  cercle de coudes  </h2>
-                <img className="img_echauf" src={coudes} alt="cercle de coudes"></img>
-
-            </div>
-            ) : (<div></div>)}
-
-            {image5 ? (<div>
+                {image3 ? (<div>
 
 
-                <h2>cercle de poignes    </h2>
-                <img className="img_echauf" src={poigne} alt="cercle de poignes"></img>
+                    <h2>cercle d'epaules    </h2>
+                    <img className="img_echauf" src={epaules} alt="cercle d'epaules"></img>
 
-            </div>
-            ) : (<div></div>)}
+                </div>
+                ) : (<div></div>)}
 
-            {image6 ? (<div>
-
-
-                <h2>   coude au genou </h2>
-                <img className="img_echauf" src={genou} alt="coude au genou"></img>
-
-            </div>
-            ) : (<div></div>)}
-
-            {image7 ? (<div className='div_img_echauff'>
+                {image4 ? (<div>
 
 
-                <h2>squat / pompe / gainage    </h2>
-                <img className="img_echauf" src={gainage} alt="squat a position pompe a gainage"></img>
+                    <h2>  cercle de coudes  </h2>
+                    <img className="img_echauf" src={coudes} alt="cercle de coudes"></img>
 
-            </div>
-            ) : (<div></div>)}
+                </div>
+                ) : (<div></div>)}
 
-            {image8 ? (<div>
+                {image5 ? (<div>
 
 
-                <h2>echauff terminer    </h2>
-                <img className="img_echauf" alt="echauff terminer"></img>
+                    <h2>cercle de poignes    </h2>
+                    <img className="img_echauf" src={poigne} alt="cercle de poignes"></img>
 
-            </div>
-            ) : (<div></div>)
-            }
+                </div>
+                ) : (<div></div>)}
 
-            <div className='timer'></div><p className='timer_echauff'> {minute}  :{seconde2}{counter} : {miliseconde2}{miliseconde}</p>
-        </main >
+                {image6 ? (<div>
+
+
+                    <h2>   coude au genou </h2>
+                    <img className="img_echauf" src={genou} alt="coude au genou"></img>
+
+                </div>
+                ) : (<div></div>)}
+
+                {image7 ? (<div className='div_img_echauff'>
+
+
+                    <h2>squat / pompe / gainage    </h2>
+                    <img className="img_echauf" src={gainage} alt="squat a position pompe a gainage"></img>
+
+                </div>
+                ) : (<div></div>)}
+
+                {image8 ? (<div>
+
+
+                    <h2>echauff terminer    </h2>
+                    <img className="img_echauf" src={gainage} alt="squat a position pompe a gainage"></img>
+                    <button onClick={handle_traing_hdc
+                    }>Continuer sur l'entrainement Hdc</button>
+                </div>
+                ) : (<div></div>)
+                }
+
+                <div className='timer'></div><p className='timer_echauff'> {minute}  :{seconde2}{counter} : {miliseconde2}{miliseconde}</p>
+            </main >
+        </div>
     )
 }
 

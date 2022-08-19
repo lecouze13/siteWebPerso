@@ -58,29 +58,30 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
     }, []);
 
     return (
-        <div className='main_poids'>
+        <div>
+            <h1> Courbe de la masse corporelle </h1>
+            <ResponsiveContainer width="100%" aspect={2.5}>
+                <LineChart
+                    width={500}
+                    height={400}
+                    data={data}
 
-            <LineChart
-                width={1000}
-                height={600}
-                data={data}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis type='number' domain={[62, 70]} />
+                    <Tooltip />
+                    <Legend />
+                    <Line
+                        type="monotone"
+                        dataKey="poids"
+                        stroke="#8884d8"
+                        activeDot={{ r: 5 }}
+                    />
 
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis type='number' domain={[60, 80]} />
-                <Tooltip />
-                <Legend />
-                <Line
-                    type="monotone"
-                    dataKey="poids"
-                    stroke="#8884d8"
-                    activeDot={{ r: 5 }}
-                />
-
-            </LineChart>
-
-
+                </LineChart>
+            </ResponsiveContainer>
         </div>
+
     );
 }

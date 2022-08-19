@@ -12,8 +12,8 @@ import { Chronometre } from '../sport/chronometre'
 // import { Minuteur } from '../sport/minuteur'
 import { ThemeProvider } from "styled-components";
 // import pompe_PS from "../image/Pompe_PS.png";
-import { EXO_HAUTDUCORPS } from "../sport/EXO_HAUTDUCORPS";
-import { EXO_BASDUCORPS } from "../sport/EXO_BASDUCORPS";
+import { EXO_HAUTDUCORPS } from "../sport/HautDC/EXO_HAUTDUCORPS";
+import { EXO_BASDUCORPS } from "../sport/BasDC/EXO_BASDUCORPS";
 import { GRAFFE_POIDS } from "../sport/GRAFFE_POIDS";
 // import { Tableau } from "../sport/tableau";
 import WebFont from 'webfontloader';

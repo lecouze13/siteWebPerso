@@ -54,6 +54,15 @@ label {
     margin-top: 200px;
 }
 
+
+@media (min-width: 1050px) {
+
+    .Haut_du_corp_exo_tableau {
+        width: 1040px;
+    }
+
+}
+
 @media (max-width: 900px) {
     .main_button_choix {
 

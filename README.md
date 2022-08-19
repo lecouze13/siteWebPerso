@@ -6,6 +6,16 @@ afaire media queris sport and co
 
 
 
-faire un chrono sans decors
+
  implementer l'echauffement
- finir les immg echuaff
+ pb echauff timer trop fast
+
+
+
+faire un meilleur laout pour haut du corps
+
+faire un graph pour perf max  aussi ?? a decider
+audio test dans echauff 
+
+
+corriger les warning

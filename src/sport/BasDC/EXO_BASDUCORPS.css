@@ -1,0 +1,42 @@
+#input_poids {
+    margin: auto;
+    margin-top: 100px;
+}
+
+.div_poids {
+    margin: auto;
+}
+
+
+#alert_poids {
+    position: fixed;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .div_poids {
+
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .div_poids button {
+        width: 100px;
+        margin: auto;
+
+    }
+
+    .div_poids input {
+        margin: 15px auto;
+    }
+
+    .div_poids label {
+        margin-top: 100px;
+    }
+
+    #input_poids {
+
+        margin-top: 0;
+    }
+}
