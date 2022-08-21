@@ -1,8 +1,10 @@
 
 
 import { delay } from 'lodash';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
+
+import "./Entrainement_hdc.css";
 import Pompe_ms from '../../image/muscu/Pompe_MS.jfif'
 import Pompe from '../../image/muscu/Pompe Classique.png'
 import pompe_PS from "../../image/muscu/Pompe_PS.png";
@@ -16,7 +18,9 @@ import Developper_militaire from '../../image/muscu/Developper_militaire.webp'
 import elevation_laterale from '../../image/muscu/Elevations-laterales.webp'
 
 import { Tableau } from "./tableau";
-
+import ReactAudioPlayer from 'react-audio-player';
+import music1 from '../../audio/music1Sport.mp3'
+import music40min from '../../audio/40min_masculinity.mp3'
 
 export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
 
@@ -82,7 +86,7 @@ export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
     const suivant6 = () => {
         setTimeout(() => {
             setSuivant6(true);
-            setSuivant5(false);;
+            setSuivant5(false);
         }, 10);
     }
     const suivant7 = () => {
@@ -138,9 +142,12 @@ export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
     const [Tab_rep] = useState([]);
 
 
+    const [music_1_over, setmusic_1_over] = useState(false)
 
 
-
+    const changeMusic = () => {
+        setmusic_1_over(!music_1_over)
+    }
 
 
 
@@ -150,6 +157,15 @@ export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
 
         <div>
 
+
+            <ReactAudioPlayer
+                src={music_1_over ? music1 : music40min}
+                autoPlay
+                controls
+                volume={0.5}
+                onEnded={changeMusic}
+
+            />
 
 
             {

@@ -4,6 +4,7 @@
 
     margin: auto;
     margin-top: 20%;
+    flex-wrap: wrap;
 }
 
 .margin_button_entrainement {

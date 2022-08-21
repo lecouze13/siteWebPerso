@@ -1,0 +1,10 @@
+audio.react-audio-player {
+    width: 100%;
+    position: fixed;
+
+    bottom: 0%;
+    left: 0%;
+    border-radius: 0;
+    background-color: #f1f3f4;
+
+}
