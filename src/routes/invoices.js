@@ -7,6 +7,8 @@ import ThemeSelector from '../theme/ThemeSelector';
 import { ThemeProvider } from "styled-components";
 import WebFont from 'webfontloader';
 import Header from '../header/header';
+import Footer from '../footer/Footer';
+
 export default function Invoices() {
     const { theme, themeLoaded, getFonts } = useTheme();
     const [selectedTheme, setSelectedTheme] = useState(theme);
@@ -49,5 +51,6 @@ export default function Invoices() {
                 </ThemeProvider>
             }
         </main >
+
     );
 }

@@ -7,6 +7,7 @@ import { useTheme } from '../theme/useTheme';
 import axios from "axios";
 import "./expenses.css"
 import Login from "./login/Login";
+import Footer from '../footer/Footer';
 
 import Header from '../header/header';
 
@@ -210,6 +211,7 @@ export default function Expenses() {
                         />
                     )
             }
+            <Footer />
 
         </main >
     );

@@ -18,6 +18,7 @@ import { handleBreakpoints } from '@mui/system';
 
 
 
+
 export const EXO_HAUTDUCORPS = () => {
 
 
@@ -70,9 +71,9 @@ export const EXO_HAUTDUCORPS = () => {
                 {echauff ? (<div>
                     <Echauffement Miliseconde={1}
                         Miliseconde2={0}
-                        Seconde={5}
+                        Seconde={0}
                         Seconde2={0}
-                        Minute={0}
+                        Minute={4}
                         handle_traing_hdc={handle_traing_hdc}
 
                     />

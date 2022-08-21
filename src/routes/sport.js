@@ -18,6 +18,8 @@ import { GRAFFE_POIDS } from "../sport/GRAFFE_POIDS";
 // import { Tableau } from "../sport/tableau";
 import WebFont from 'webfontloader';
 import Header from '../header/header';
+import Footer from '../footer/Footer';
+
 export default function Invoices() {
     const { theme, themeLoaded, getFonts } = useTheme();
     const [selectedTheme, setSelectedTheme] = useState(theme);
@@ -124,7 +126,7 @@ export default function Invoices() {
             {bas ? (<div> <EXO_BASDUCORPS />
             </div>) : (<div></div>)
             }
-
+            <Footer />
         </main >
     );
 }
