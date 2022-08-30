@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 
 import './GRAFFE_POIDS.css'
 
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
 
-var bool_verif_data;
+
 
 
 
@@ -38,7 +38,7 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
         ]
 
         localStorage.setItem("Poids", JSON.stringify(dataf))
-        bool_verif_data = 0
+
     }
     useEffect(() => {
 
@@ -55,7 +55,8 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
         }
 
 
-    }, []);
+    }, []);// eslint-disable-line react-hooks/exhaustive-deps
+
 
     return (
         <div>

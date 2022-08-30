@@ -1,6 +1,6 @@
 import './tableau.css'
 import '../chronometre.css'
-import { makeStyles } from '@material-ui/core/styles';
+import { } from '@material-ui/core/styles';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -46,8 +46,8 @@ export const Tableau = ({ var1 }) => {
     if (TodayDate === 10)
         console.log(TodayDate)
 
-    function createData(name, exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11) {
-        return { name, exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11 }
+    function createData(name, exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11, exo12, exo13) {
+        return { name, exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11, exo12, exo13 }
     }
 
     const [rows, setItems] = useState([]);
@@ -78,6 +78,8 @@ export const Tableau = ({ var1 }) => {
                     exo10: var1[9],
                     exo11: var1[10],
                     exo12: var1[11],
+                    exo13: var1[12],
+                    exo14: var1[13],
                 },
 
             ]
@@ -100,13 +102,13 @@ export const Tableau = ({ var1 }) => {
 
             }
             else {
-                rows.push(createData(TodayDate, var1[0], var1[1], var1[2], var1[3], var1[4], var1[5], var1[6], var1[7], var1[8], var1[9], var1[10], var1[11]));
+                rows.push(createData(TodayDate, var1[0], var1[1], var1[2], var1[3], var1[4], var1[5], var1[6], var1[7], var1[8], var1[9], var1[10], var1[11], var1[12], var1[13]));
             }
             localStorage.removeItem("dataHDC")
             localStorage.setItem("dataHDC", JSON.stringify(rows))
             bool = 0
         }
-    }, []);
+    }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
 
 
@@ -131,9 +133,10 @@ export const Tableau = ({ var1 }) => {
                             <StyledTableCell align="right">superman</StyledTableCell>
                             <StyledTableCell align="right">curl haltere</StyledTableCell>
                             <StyledTableCell align="right">curl marteau</StyledTableCell>
+                            <StyledTableCell align="right">curl 3</StyledTableCell>
                             <StyledTableCell align="right">developper militaire</StyledTableCell>
                             <StyledTableCell align="right">relever epaule</StyledTableCell>
-
+                            <StyledTableCell align="right">epaule 3</StyledTableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -153,6 +156,8 @@ export const Tableau = ({ var1 }) => {
                                 <StyledTableCell align="right">{row.exo9}</StyledTableCell >
                                 <StyledTableCell align="right">{row.exo10}</StyledTableCell >
                                 <StyledTableCell align="right">{row.exo11}</StyledTableCell >
+                                <StyledTableCell align="right">{row.exo12}</StyledTableCell >
+                                <StyledTableCell align="right">{row.exo13}</StyledTableCell >
                             </StyledTableRow >
                         ))}
                     </TableBody>

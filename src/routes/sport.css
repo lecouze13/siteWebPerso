@@ -30,24 +30,29 @@ label {
 
 .button_Hdc,
 .button_Bdc {
-    width: 40%;
+    width: 30%;
     margin: auto;
     margin-top: 10%;
-    height: 200px;
+    height: 150px;
+    border-radius: 5%;
+
 }
 
 .choix_button {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .main_button_choix {
     background-color: #457790;
-    width: 1000px;
-    height: 500px;
+    width: 1016px;
+    height: 600px;
     margin: auto;
     margin-top: 100px;
     border-radius: 2%;
     padding: 25px;
+
 }
 
 .link_kcal {
@@ -55,19 +60,12 @@ label {
 }
 
 
-@media (min-width: 1050px) {
 
-    .Haut_du_corp_exo_tableau {
-        width: 1040px;
-    }
-
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
     .main_button_choix {
 
-        width: 500px;
-        height: 300px;
+        width: 600px;
+        height: 400px;
         margin-top: 50px;
 
     }
@@ -76,17 +74,19 @@ label {
     .button_Bdc {
 
 
-
-        height: 115px;
+        width: 35%;
+        height: 90px;
+        margin: auto;
+        margin-top: 25px;
     }
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .main_button_choix {
 
-        width: 300px;
-        height: 200px;
+        width: 90%;
+        height: 350px;
         margin-top: 25px;
         padding: 5px;
     }
@@ -95,8 +95,8 @@ label {
     .button_Bdc {
 
         margin-top: 10px;
-        width: 45%;
-        height: 115px;
+        width: 80%;
+        height: 80px;
     }
 
     .main_button_choix h2 {

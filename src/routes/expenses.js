@@ -17,7 +17,7 @@ import Header from '../header/header';
 // import Chart from 'chart.js/auto'
 
 
-var test = [];
+
 
 
 
@@ -51,8 +51,8 @@ export default function Expenses() {
 
 
     const [dataa, setdata] = useState([])
+    if (dataa) { }
 
-    const [bool, setbool] = useState(true)
 
 
     const [etat_login, Setetat_login] = useState(false);
@@ -83,7 +83,7 @@ export default function Expenses() {
 
 
             setdata(response.data);
-            setbool(false);
+
 
         });
         setInterval(() => {
@@ -97,7 +97,7 @@ export default function Expenses() {
 
 
                 setdata(response.data);
-                setbool(false);
+
 
                 localStorage.setItem("databtc", JSON.stringify(btc_data))
 
@@ -115,7 +115,7 @@ export default function Expenses() {
     }, []);
 
 
-    test = JSON.parse(localStorage.getItem("databtc"));
+
 
 
 
@@ -161,7 +161,7 @@ export default function Expenses() {
 
 
                         <div>
-                            <div>
+                            {/* <div>
                                 {
 
                                 }

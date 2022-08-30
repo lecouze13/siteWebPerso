@@ -30,7 +30,7 @@ export const Chronometre = () => {
     useEffect(() => {
         if (isactive === true && isset === true) {
 
-            intervalle = setInterval(() => {
+            intervalle = setInterval(() => {// eslint-disable-line react-hooks/exhaustive-deps
                 cmpt++
                 setMiliseconde((miliseconde) => miliseconde + 1);
                 if (cmpt % 10 === 0) {

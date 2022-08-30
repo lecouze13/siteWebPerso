@@ -12,7 +12,8 @@ import poigne from '../image/echauff/cercle de poignes.gif'
 import genou from '../image/echauff/coude au genou.jpg'
 import gainage from '../image/echauff/squat a position pompe a gainage.png'
 import ReactAudioPlayer from 'react-audio-player';
-import music1 from '../audio/music1Sport.mp3'
+// import music1 from '../audio/music1Sport.mp3'
+import motivation_music from '../audio/motivational_echauff.mp3'
 
 
 
@@ -63,7 +64,7 @@ export const Echauffement = ({ Miliseconde, Miliseconde2, Seconde, Seconde2, Min
         Start();
         if (isactive === true && isset === true) {
             cmpt = miliseconde + miliseconde2 * 10 + counter * 100 + seconde2 * 1000 + minute * 6000
-            intervalle = setInterval(() => {
+            intervalle = setInterval(() => {// eslint-disable-line react-hooks/exhaustive-deps
                 // if (miliseconde === 0
                 //     //  && miliseconde === 0 && counter === 0 && seconde2 === 0 && minute === 0
                 // ) {
@@ -194,18 +195,18 @@ export const Echauffement = ({ Miliseconde, Miliseconde2, Seconde, Seconde2, Min
     }
 
 
-    function pause() {
+    // function pause() {
 
-        if (isactive === true) {
+    //     if (isactive === true) {
 
 
-            setisset(false)
-        }
-        else {
+    //         setisset(false)
+    //     }
+    //     else {
 
-        }
+    //     }
 
-    }
+    // }
 
 
 
@@ -222,7 +223,7 @@ export const Echauffement = ({ Miliseconde, Miliseconde2, Seconde, Seconde2, Min
     return (
         <div>
             <ReactAudioPlayer
-                src={music1}
+                src={motivation_music}
                 autoPlay
                 controls
 
