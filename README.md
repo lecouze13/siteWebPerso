@@ -1,10 +1,23 @@
 
-
+A faire
 faire tous les media queries pour tel 
-afaire media queris sport and co
+   ____trouver solution pour tableau responsive
 
-         faire un graph pour perf max  aussi ?? a decider
+       
         entrainement bas du courp a finir
 
+changer la music pour le discourdsa motiv
 
-corriger les warning
+
+
+
+
+
+En plus 
+
+
+graph pour perf max,ajustement de certain layout
+
+rajout d'exo hdc + correction bug
+changer le logo sur page 
+rajuster les layout avec bouton entrainement et data

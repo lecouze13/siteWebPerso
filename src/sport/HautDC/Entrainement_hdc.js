@@ -1,7 +1,7 @@
 
 
-import { delay } from 'lodash';
-import { useState, useRef } from 'react';
+
+import { useState } from 'react';
 
 
 import "./Entrainement_hdc.css";
@@ -22,7 +22,7 @@ import ReactAudioPlayer from 'react-audio-player';
 import music1 from '../../audio/music1Sport.mp3'
 import music40min from '../../audio/40min_masculinity.mp3'
 
-export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
+export const ENTRAINEMENT_HDC = ({ Suivant1, setSuivant1 }) => {
 
 
     [Suivant1, setSuivant1] = useState(true)
@@ -45,7 +45,7 @@ export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
 
     const [Suivant12, setSuivant12] = useState(false);
     const [Suivant13, setSuivant13] = useState(false);
-
+    const [Suivantbiceps, setSuivantbiceps] = useState(false);
 
 
 
@@ -105,6 +105,12 @@ export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
     }
 
 
+    const suivantbiceps = () => {
+        setTimeout(() => {
+            setSuivantbiceps(true);
+            setSuivant9(false);
+        }, 10);
+    }
     const suivant9 = () => {
         setTimeout(() => {
             setSuivant9(true);
@@ -114,7 +120,7 @@ export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
     const suivant10 = () => {
         setTimeout(() => {
             setSuivant10(true);
-            setSuivant9(false);
+            setSuivantbiceps(false);
         }, 10);
     }
     const suivant11 = () => {
@@ -129,7 +135,12 @@ export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
             setSuivant11(false);
         }, 10);
     }
-
+    const suivant13 = () => {
+        setTimeout(() => {
+            setSuivant13(true);
+            setSuivant12(false);
+        }, 10);
+    }
 
 
     const handleSubmit = (evt) => {
@@ -162,7 +173,7 @@ export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
                 src={music_1_over ? music1 : music40min}
                 autoPlay
                 controls
-                volume={0.5}
+                volume={0.9}
                 onEnded={changeMusic}
 
             />
@@ -337,11 +348,31 @@ export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
                             <input type="text" id="nb_rep" value={name} onChange={e => setName(e.target.value)}
                             />  </div>
                         <div className='btn_submit_div'>
+                            <input className="btn btn-primary" type="submit" value="Valider" onClick={suivantbiceps} />
+
+                        </div></form> </div>
+                ) : (<div></div>)}
+            </div>
+
+
+            <div className="Haut_du_corp_exo">
+                {Suivantbiceps ? (<div>
+                    <form onSubmit={handleSubmit}>
+
+                        <h2>curl 3</h2>
+                        <img className="pompe" src={Developper_militaire} alt="pompe spike"></img>
+                        <div className="rep_div">
+                            <label for="nb_rep"> Nombres de rep :</label>
+
+                            <input type="text" id="nb_rep" value={name} onChange={e => setName(e.target.value)}
+                            />  </div>
+                        <div className='btn_submit_div'>
                             <input className="btn btn-primary" type="submit" value="Valider" onClick={suivant10} />
 
                         </div></form> </div>
                 ) : (<div></div>)}
             </div>
+
 
             <div className="Haut_du_corp_exo">
                 {Suivant10 ? (<div>
@@ -380,9 +411,27 @@ export const Entrainement_hdc = ({ Suivant1, setSuivant1 }) => {
                 ) : (<div></div>)}
 
             </div>
+            <div className="Haut_du_corp_exo">
+                {Suivant12 ? (<div>
+                    <form onSubmit={handleSubmit}>
+
+                        <h2>exo epaule 3 </h2>
+                        <img className="pompe" src={elevation_laterale} alt="pompe spike"></img>
+                        <div className="rep_div">
+                            <label for="nb_rep"> Nombres de rep :</label>
+
+                            <input type="text" id="nb_rep" value={name} onChange={e => setName(e.target.value)}
+                            />  </div>
+                        <div className='btn_submit_div'>
+                            <input className="btn btn-primary" type="submit" value="Valider" onClick={suivant13} />
+
+                        </div></form> </div>
+                ) : (<div></div>)}
+
+            </div>
 
             <div className="Haut_du_corp_exo_tableau">
-                {Suivant12 ? (<div>
+                {Suivant13 ? (<div>
                     <Tableau
                         var1={Tab_rep}
 

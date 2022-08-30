@@ -5,10 +5,10 @@ import '../chronometre.css'
 import './EXO_HAUTDUCORPS.css'
 import { Chronometre } from '../chronometre'
 import { Echauffement } from '../Echauffement'
-import { Entrainement_hdc } from './Entrainement_hdc';
+import { ENTRAINEMENT_HDC } from './ENTRAINEMENT_HDC';
 
 import { Tableau } from "./tableau";
-import { handleBreakpoints } from '@mui/system';
+
 
 
 
@@ -85,10 +85,11 @@ export const EXO_HAUTDUCORPS = () => {
 
 
                 {menu_choix_training ? (<div>
-                    <button className='margin_button_entrainement' onClick={suivant} >
-                        Débutez l'entrainement</button>
+
                     <button className='margin_button_entrainement' onClick={suivant13}> Afficher tab Perfs</button>
-                    <button className='margin_button_entrainement' onClick={echauff_trigger}>Echauffement</button></div>) : (<div></div>)
+                    <button className='margin_button_entrainement' onClick={echauff_trigger}>Echauffement</button>
+                    <button className='margin_button_entrainement' onClick={suivant} >
+                        Débutez l'entrainement</button></div>) : (<div></div>)
 
                 }
 
@@ -105,7 +106,7 @@ export const EXO_HAUTDUCORPS = () => {
             </div>
             {Suivant ? (<div className="Haut_du_corp_exo">
                 <Chronometre />
-                < Entrainement_hdc Suivant1={Suivant1}
+                <ENTRAINEMENT_HDC Suivant1={Suivant1}
                     setSuivant1={setSuivant1}
 
                 />

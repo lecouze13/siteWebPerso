@@ -10,10 +10,10 @@ export const Aside = ({ handleChange1, value, checked, handleChange_checkbox, ch
 
 
 
-    const [valRange, set_val_range] = useState("")
-    const handlechangeRange = (e) => {
-        set_val_range(e.target.value)
-    }
+
+    // const handlechangeRange = (e) => {
+    //     set_val_range(e.target.value)
+    // }
     return open ? (
 
         <main>
