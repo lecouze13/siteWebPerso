@@ -12,12 +12,3 @@ changer la music pour le discourdsa motiv
 
 
 
-
-En plus 
-
-
-graph pour perf max,ajustement de certain layout
-
-rajout d'exo hdc + correction bug
-changer le logo sur page 
-rajuster les layout avec bouton entrainement et data

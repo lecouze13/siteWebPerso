@@ -5,7 +5,7 @@ import '../chronometre.css'
 import './EXO_HAUTDUCORPS.css'
 import { Chronometre } from '../chronometre'
 import { Echauffement } from '../Echauffement'
-import { ENTRAINEMENT_HDC } from './ENTRAINEMENT_HDC';
+import { ENTRAINEMENT_HDC } from './Entrainement_hdc';
 
 import { Tableau } from "./tableau";
 
