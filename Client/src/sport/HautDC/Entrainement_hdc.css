@@ -1,0 +1,66 @@
+audio.react-audio-player {
+    width: 100%;
+    position: fixed;
+
+    bottom: 0%;
+    left: 0%;
+    border-radius: 0;
+    background-color: #f1f3f4;
+
+}
+
+.forme_HDC {
+
+    background-color: #457790;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 7%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media (max-width: 1050px) {
+    .forme_HDC {
+
+        width: 600px;
+        height: 400px;
+        margin-top: 50px;
+
+    }
+}
+
+@media (max-width: 600px) {
+    .forme_HDC {
+
+        width: 90%;
+        height: 350px;
+        margin-top: 25px;
+        padding: 5px;
+    }
+
+    .rep_div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .forme_HDC h2 {
+        font-size: 17px;
+        margin-top: 5px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .forme_HDC {
+
+
+        height: 292px;
+
+    }
+}
