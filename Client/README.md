@@ -1,3 +1,8 @@
+On passe en 2.0.0.0
+
+
+
+
 
 '''''''_________A faire_____________________
 faire tous les media queries pour tel
