@@ -37,7 +37,7 @@ export const Data = () => {
         } else {
 
 
-            axios.post("http://localhost:9000/API/addpoids", { poids_input: poids_input, date: TodayDate })
+            axios.post("https://app-sport-geano.netlify.app/API/addpoids", { poids_input: poids_input, date: TodayDate })
             console.log(poids_input + "ee" + TodayDate)
             setTimeout(() => {
                 Setgraff_poids(current => !current);

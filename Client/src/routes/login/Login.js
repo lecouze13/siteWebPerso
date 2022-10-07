@@ -58,7 +58,7 @@ export default function Login({ etat_login_local, handleSubmit, SetUser, Usernam
     const [testNode, SettestNode] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:9000/API")
+        axios.get("https://app-sport-geano.netlify.app/")
             .then((response) => { SettestNode(response.data) });
 
 
@@ -85,7 +85,7 @@ export default function Login({ etat_login_local, handleSubmit, SetUser, Usernam
             if (test !== 1) {
                 test = 1
                 sessionStorage.setItem("Pseudo", Username)
-                axios.post("http://localhost:9000/API/insertPseudo", { Username: Username, Mdp: Mdp })
+                axios.post("https://app-sport-geano.netlify.app/API/insertPseudo", { Username: Username, Mdp: Mdp })
                     .then(() => { alert("inset succes") });
 
 
@@ -113,7 +113,7 @@ export default function Login({ etat_login_local, handleSubmit, SetUser, Usernam
                 sessionStorage.setItem("Pseudo", Username_login)
 
 
-                axios.post("http://localhost:9000/API/insertPseudo", { Username: Username_login })
+                axios.post("https://app-sport-geano.netlify.app/API/insertPseudo", { Username: Username_login })
                     .then(() => { alert("inset succes") });
 
                 handleSubmit()
