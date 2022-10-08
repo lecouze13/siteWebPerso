@@ -11,9 +11,10 @@ app.use(cookieParser());
 
 
 const pool = createPool({
-    host: "localhost",
-    user: "root",
-    password: "Fran0147890",
+    host: "eu-cdbr-west-03.cleardb.net",
+    user: "b4c262172a8b92",
+    password: "f0ebc828",
+    database: "heroku_53cf1010a1c3a37",
     connectionLimit: 10
 })
 
