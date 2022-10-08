@@ -18,7 +18,6 @@ const pool = createPool({
     connectionLimit: 10
 })
 
-
 router.get('/', (req, ress,) => {
     pool.query('SELECT * FROM database_siteperso.users', (err, res) => {
 
