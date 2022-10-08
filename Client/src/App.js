@@ -137,8 +137,17 @@ function App() {
 
 
 
+  const [testNode, SettestNode] = useState([])
+
+  useEffect(() => {
+    axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API")
+      .then((response) => { SettestNode(response.data) });
 
 
+
+  }, []);
+  console.log("test")
+  console.log(testNode)
 
   return (
 
