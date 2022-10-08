@@ -22,7 +22,8 @@ sur poids decalage de une data
 
 
 
-
+Corriger les liens vers sie au lieu du local host 
+et voir les bug si ya ave l'appli
 
 
 ------------en train de faire--------------
