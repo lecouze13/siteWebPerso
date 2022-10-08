@@ -159,7 +159,7 @@ export const ENTRAINEMENT_HDC = ({ Suivant1, setSuivant1 }) => {
             setSuivant13(true);
             setSuivant12(false);
 
-            axios.post("https://app-sport-geano.netlify.app/API/insertrep", { Tab_rep: Tab_rep, date: TodayDate })
+            axios.post("https://lorenzo-geano-sport-app.herokuapp.com/API/insertrep", { Tab_rep: Tab_rep, date: TodayDate })
                 .then(() => { alert("inset succes") });
 
 
