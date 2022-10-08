@@ -58,7 +58,7 @@ export default function Login({ etat_login_local, handleSubmit, SetUser, Usernam
     const [testNode, SettestNode] = useState([])
 
     useEffect(() => {
-        axios.get("https://app-sport-geano.netlify.app/")
+        axios.get("https://app-sport-geano.netlify.app/API/insertPseudo")
             .then((response) => { SettestNode(response.data) });
 
 
