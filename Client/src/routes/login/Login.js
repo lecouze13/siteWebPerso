@@ -58,7 +58,7 @@ export default function Login({ etat_login_local, handleSubmit, SetUser, Usernam
     const [testNode, SettestNode] = useState([])
 
     useEffect(() => {
-        axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API/insertPseudo")
+        axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API/test")
             .then((response) => { SettestNode(response.data) });
 
 
