@@ -18,8 +18,9 @@ const pool = createPool({
     connectionLimit: 10
 })
 
-router.get('/', (req, ress,) => {
-    pool.query('SELECT * FROM database_siteperso.users', (err, res) => {
+
+router.get('/test', (req, ress,) => {
+    pool.query('SELECT * FROM heroku_53cf1010a1c3a37.users', (err, res) => {
 
 
 
@@ -42,7 +43,7 @@ router.post('/insertPseudo', (req, resp) => {
 
     const Mdp = req.body.Mdp
     console.log("Username insetpseudo==" + Username)
-    const sqlInsert = "INSERT INTO database_siteperso.users (Username, Mdp) VALUES (?, ?);"
+    const sqlInsert = "INSERT INTO heroku_53cf1010a1c3a37.users (Username, Mdp) VALUES (?, ?);"
     pool.query(sqlInsert, [Username, Mdp], (err, result) => {
         console.log("resulte" + result)
 
@@ -73,7 +74,7 @@ router.post('/insertrep', (req, ress,) => {
     tst14 = req.body.Tab_rep[13]
     tst15 = req.body.Tab_rep[14]
 
-    const sqlInsert = "INSERT INTO database_siteperso.tab_hdc (id_users, date, exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11, exo12, exo13, exo14) VALUES (?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)"
+    const sqlInsert = "INSERT INTO heroku_53cf1010a1c3a37.tab_hdc (id_users, date, exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11, exo12, exo13, exo14) VALUES (?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)"
     pool.query(sqlInsert, [id_users, date, tst1, tst2, tst3, tst4, tst5, tst6, tst7, tst8, tst9, tst10, tst11, tst12, tst13, tst14], (err, result) => {
         console.log("resulte" + result)
         console.log("erreur : " + err)
@@ -88,7 +89,7 @@ router.post('/insertrep', (req, ress,) => {
 router.get('/poids', (req, ress,) => {
 
 
-    pool.query(' SELECT poids,date FROM database_siteperso.poids where idUsers=?', [Username], (err, res) => {
+    pool.query(' SELECT poids,date FROM heroku_53cf1010a1c3a37.poids where idUsers=?', [Username], (err, res) => {
 
         console.log("Username= podis=" + Username)
 
@@ -103,7 +104,7 @@ router.post('/addpoids', (req, ress,) => {
     const idUsers = Username
     const Poids = req.body.poids_input
     const date = req.body.date
-    const sqlInsert = "INSERT INTO database_siteperso.poids (idUsers, Poids, date) VALUES (?,?,?);"
+    const sqlInsert = "INSERT INTO heroku_53cf1010a1c3a37.poids (idUsers, Poids, date) VALUES (?,?,?);"
 
     pool.query(sqlInsert, [idUsers, Poids, date], (err, result) => {
         console.log("resulte" + result)
@@ -120,7 +121,7 @@ router.post('/addpoids', (req, ress,) => {
 router.get('/exo_hdc', (req, ress,) => {
 
 
-    pool.query(' SELECT * FROM database_siteperso.tab_hdc where id_users=?', [Username], (err, res) => {
+    pool.query(' SELECT * FROM heroku_53cf1010a1c3a37.tab_hdc where id_users=?', [Username], (err, res) => {
 
         console.log("Username exo_hdc==" + Username)
         ress.cookie("userData", "eeee");

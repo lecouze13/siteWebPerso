@@ -140,7 +140,7 @@ function App() {
   const [testNode, SettestNode] = useState([])
 
   useEffect(() => {
-    axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API")
+    axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API/test")
       .then((response) => { SettestNode(response.data) });
 
 
@@ -152,9 +152,6 @@ function App() {
   return (
 
     <div className="App">
-
-
-
 
 
 
