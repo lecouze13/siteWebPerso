@@ -113,13 +113,12 @@ export const Tableau = () => {
     const [testNode, SettestNode] = useState([])
 
     useEffect(() => {
-        axios.get("https://app-sport-geano.netlify.app/API/exo_hdc")
+        axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API/exo_hdc")
             .then((response) => { SettestNode(response.data) });
 
 
     }, []);
 
-    console.log(testNode)
 
 
 

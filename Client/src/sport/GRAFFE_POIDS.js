@@ -64,7 +64,7 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
     const [testNode, SettestNode] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:9000/API/poids")
+        axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API/poids")
             .then((response) => { SettestNode(response.data) });
         console.log("poids input == " + testNode.data)
 
