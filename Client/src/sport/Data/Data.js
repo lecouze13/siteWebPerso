@@ -38,7 +38,7 @@ export const Data = () => {
 
 
             axios.post("https://lorenzo-geano-sport-app.herokuapp.com/API/addpoids", { poids_input: poids_input, date: TodayDate })
-            console.log(poids_input + "ee" + TodayDate)
+     
             setTimeout(() => {
                 Setgraff_poids(current => !current);
             }, 35);
