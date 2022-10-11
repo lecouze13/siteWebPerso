@@ -66,7 +66,7 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
     useEffect(() => {
         axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API/poids")
             .then((response) => { SettestNode(response.data) });
-        console.log("poids input == " + testNode.data)
+       
 
 
     }, []);
@@ -78,7 +78,7 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
 
 
 
-    console.log(testNode.date)
+
 
     return (
         <div>

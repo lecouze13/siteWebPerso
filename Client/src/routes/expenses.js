@@ -148,47 +148,7 @@ export default function Expenses() {
 
                         <div>
 
-                            {/* <div>
-                                {
-
-                                }
-
-
-                            </div>
-
-                            <div>
-                                {
-                                    bool ? (
-                                        <h1>Loading...</h1>
-                                    ) : (
-
-                                        <div>
-                                            <h1> le bitcoin vaut {dataa.bpi.EUR.rate} €</h1>
-                                            <h2> L'update date du {dataa.time.updated}  </h2>
-                                        </div>)}
-                            </div>
-                            <table>
-                                <ul>{test.map(test => <tr key={test}> {test} </tr>)}</ul>
-                            </table>
-
-
-                            {/* <Bar
-                                data={state}
-                                options={{
-                                    title: {
-                                        display: true,
-                                        text: 'Average Rainfall per month',
-                                        fontSize: 10
-                                    },
-                                    scales: {
-                                        y: {
-                                            min: 34,
-                                            max: 34.8,
-                                            stepSize: 0.01,
-                                        },
-                                    },
-                                }}
-                            /> */}
+                           
                         </div >
 
                     ) : (
