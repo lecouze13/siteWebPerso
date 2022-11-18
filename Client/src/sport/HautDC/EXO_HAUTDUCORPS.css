@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+.global {
+    margin-top: 30px;
+}
+
 @media (max-width: 510px) {
 
     .pompe {

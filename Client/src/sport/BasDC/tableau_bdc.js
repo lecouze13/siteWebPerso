@@ -1,4 +1,4 @@
-import './tableau.css'
+import '../HautDC/tableau.css'
 import '../chronometre.css'
 import { } from '@material-ui/core/styles';
 import { styled } from '@mui/material/styles';
@@ -46,79 +46,17 @@ export const Tableau = () => {
     if (TodayDate === 10)
         console.log(TodayDate)
 
-    // function createData(name, exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11, exo12, exo13) {
-    //     return { name, exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11, exo12, exo13 }
-    // }
-
-    // const [rows, setItems] = useState([]);
 
 
-
-    // const verif_exo = JSON.parse(localStorage.getItem('dataHDC'));
-    // if (var1.length === 0) {
-
-    // }
-    // else {
-
-
-    //     if (verif_exo === null) {
-    //         const dataf = [
-    //             {
-    //                 name: TodayDate,
-
-    //                 exo1: var1[0],
-    //                 exo2: var1[1],
-    //                 exo3: var1[2],
-    //                 exo4: var1[3],
-    //                 exo5: var1[4],
-    //                 exo6: var1[5],
-    //                 exo7: var1[6],
-    //                 exo8: var1[7],
-    //                 exo9: var1[8],
-    //                 exo10: var1[9],
-    //                 exo11: var1[10],
-    //                 exo12: var1[11],
-    //                 exo13: var1[12],
-    //                 exo14: var1[13],
-    //             },
-
-    //         ]
-
-    //         localStorage.setItem("dataHDC", JSON.stringify(dataf))
-    //         bool = 1
-
-    //     }
-    // }
-    // console.log(var1.length)
-
-    // useEffect(() => {
-    //     const rows = JSON.parse(localStorage.getItem('dataHDC'));
-    //     if (rows) {
-    //         setItems(rows);
-    //     }
-
-    //     if (verif_exo != null) {
-    //         if (bool === 1 || var1.length === 0) { // pour ne pas reafficher des ligne si on affiche tab
-
-    //         }
-    //         else {
-    //             rows.push(createData(TodayDate, var1[0], var1[1], var1[2], var1[3], var1[4], var1[5], var1[6], var1[7], var1[8], var1[9], var1[10], var1[11], var1[12], var1[13]));
-    //         }
-    //         localStorage.removeItem("dataHDC")
-    //         localStorage.setItem("dataHDC", JSON.stringify(rows))
-    //         bool = 0
-    //     }
-    // }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
     const [testNode, SettestNode] = useState([])
 
     useEffect(() => {
-        axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API/exo_hdc")
+        axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API/exo_bdc")
             .then((response) => { SettestNode(response.data) });
 
 
     }, []);
-
 
 
 
@@ -131,14 +69,14 @@ export const Tableau = () => {
                     <TableHead>
                         <TableRow>
                             <StyledTableCell>date/exercice</StyledTableCell>
-                            <StyledTableCell align="right">dumbell press </StyledTableCell>
-                            <StyledTableCell align="right">pompe/dips</StyledTableCell>
-                            <StyledTableCell align="right">traction</StyledTableCell>
-                            <StyledTableCell align="right"> deadlift/rowing</StyledTableCell>
-                            <StyledTableCell align="right">exo triceps1</StyledTableCell>
-                            <StyledTableCell align="right">exo triceps2</StyledTableCell>
-                            <StyledTableCell align="right">curl haltere</StyledTableCell>
-                            <StyledTableCell align="right">curl marteau</StyledTableCell>
+                            <StyledTableCell align="right">goblin squat </StyledTableCell>
+                            <StyledTableCell align="right">fente/fente bulgare</StyledTableCell>
+                            <StyledTableCell align="right">deadlift ischio</StyledTableCell>
+                            <StyledTableCell align="right">extensions de mollets</StyledTableCell>
+                            <StyledTableCell align="right">developper militaire</StyledTableCell>
+                            <StyledTableCell align="right">ecarte epaule </StyledTableCell>
+                            <StyledTableCell align="right">abdos/gainage </StyledTableCell>
+                            <StyledTableCell align="right">Russian twist</StyledTableCell>
 
                         </TableRow>
                     </TableHead>
@@ -171,7 +109,6 @@ export const Tableau = () => {
     );
 
 }
-
 
 
 

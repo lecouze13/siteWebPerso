@@ -65,7 +65,7 @@ export const EXO_HAUTDUCORPS = () => {
 
     return (
 
-        <div>
+        <div className='global'>
             <div className="Haut_du_corp_div_choix">
 
                 {echauff ? (<div>
@@ -84,7 +84,7 @@ export const EXO_HAUTDUCORPS = () => {
 
 
 
-                {menu_choix_training ? (<div>
+                {menu_choix_training ? (<div className='global'>
 
                     <button className='margin_button_entrainement' onClick={suivant13}> Afficher tab Perfs</button>
                     <button className='margin_button_entrainement' onClick={echauff_trigger}>Echauffement</button>

@@ -16,6 +16,7 @@ import { EXO_HAUTDUCORPS } from "../sport/HautDC/EXO_HAUTDUCORPS";
 import { EXO_BASDUCORPS } from "../sport/BasDC/EXO_BASDUCORPS";
 import { Data } from "../sport/Data/Data";
 
+import { Expenses } from "../routes/expenses";
 // import { Tableau } from "../sport/tableau";
 import WebFont from 'webfontloader';
 import Header from '../header/header';
@@ -65,15 +66,13 @@ export default function Invoices() {
 
 
 
-
-
-
+    var connecter_localStorage = localStorage.getItem("key")
 
 
 
     return (
+        <div>
 
-        <main>
             {
                 themeLoaded && <ThemeProvider theme={selectedTheme}>
                     <GlobalStyles />
@@ -88,45 +87,50 @@ export default function Invoices() {
             }
             <Header />
             <Outlet />
+            <main>
+                {connecter_localStorage ? (<>
+                    {begin ?
+                        (<div> </div>) :
+                        (<div className="main_button_choix">
 
-            {begin ?
-                <div> </div> :
-                (<div className="main_button_choix">
+                            <h2>Choisir le type d'entrainement</h2>
+                            <div className="choix_button">
+                                <button className="button_Hdc" onClick={Haut_du_corp}><h3> Haut du corps</h3></button>
+                                <button className="button_Bdc" onClick={Bas_du_corp}> <h3>Bas du corps</h3></button>
+                                <button className="button_Bdc" onClick={data_link}> <h3>Data</h3></button>
 
-                    <h2>Choisir le type d'entrainement</h2>
-                    <div className="choix_button">
-                        <button className="button_Hdc" onClick={Haut_du_corp}><h3> Haut du corps</h3></button>
-                        <button className="button_Bdc" onClick={Bas_du_corp}> <h3>Bas du corps</h3></button>
-                        <button className="button_Bdc" onClick={data_link}> <h3>Data</h3></button>
+                            </div>
+                            <a target="_blank" rel="noreferrer" className="link_kcal" href="https://lorenzo-geano-etu.pedaweb.univ-amu.fr/Projet_importants/muscu.php">Liens vers le calculateur de kcal</a>
+                        </div >)
+                    }
 
-                    </div>
-                    <a target="_blank" rel="noreferrer" className="link_kcal" href="https://lorenzo-geano-etu.pedaweb.univ-amu.fr/Projet_importants/muscu.php">Liens vers le calculateur de kcal</a>
-                </div >)
-            }
+                    {
+                        choix ? (
+                            <div>
+                                {/* <Tableau /> */}
 
-            {
-                choix ? (
-                    <div>
-                        {/* <Tableau /> */}
+                                <EXO_HAUTDUCORPS />
 
-                        <EXO_HAUTDUCORPS />
+                            </div>
+                        ) :
+                            (
+                                <div></div>
 
-                    </div>
-                ) :
-                    (
-                        <div></div>
+                            )
 
-                    )
+                    }
 
-            }
+                    {bas ? (<div> <EXO_BASDUCORPS />
+                    </div>) : (<div></div>)
+                    }
+                    {data ? (<div><Data /> <data />
+                    </div>) : (<div></div>)
+                    }
+                    <Footer /></>) : (<div className="relink">
 
-            {bas ? (<div> <EXO_BASDUCORPS />
-            </div>) : (<div></div>)
-            }
-            {data ? (<div><Data /> <data />
-            </div>) : (<div></div>)
-            }
-            <Footer />
-        </main >
+                        <a target="_self" rel="noreferrer" className="link_kcal" href="../expenses">Liens connexion</a></div>)
+                }
+            </main >
+        </div>
     );
 }

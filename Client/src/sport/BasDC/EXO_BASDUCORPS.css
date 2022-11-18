@@ -1,42 +1,43 @@
-#input_poids {
+.Haut_du_corp_div_choix {
+
     margin: auto;
-    margin-top: 100px;
+    margin-top: 20%;
+    flex-wrap: wrap;
 }
 
-.div_poids {
-    margin: auto;
-}
-
-
-#alert_poids {
-    position: fixed;
+.margin_button_entrainement {
     width: 100%;
 }
 
-@media (max-width: 800px) {
-    .div_poids {
+.global {
+    margin-top: 30px;
+}
 
+@media (max-width: 510px) {
+
+    .pompe {
+        width: 250px;
+        height: 130px;
+    }
+
+    .form {
+        height: 300px;
+    }
+
+}
+
+@media (min-width: 800px) {
+    .Haut_du_corp_div_choix {
+        max-width: 600px;
         display: flex;
-        flex-direction: column;
-        width: 70%;
+        flex-direction: row;
+        margin-top: 5%;
     }
 
-    .div_poids button {
-        width: 100px;
-        margin: auto;
+    .margin_button_entrainement {
 
+        height: 200px;
+        font-size: 30px;
     }
 
-    .div_poids input {
-        margin: 15px auto;
-    }
-
-    .div_poids label {
-        margin-top: 100px;
-    }
-
-    #input_poids {
-
-        margin-top: 0;
-    }
 }
