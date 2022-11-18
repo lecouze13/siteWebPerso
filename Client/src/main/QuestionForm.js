@@ -21,7 +21,7 @@ function QuestionForm({ setActiveCategory, categories, activeCategory }) {
                     value={activeCategory}
                     onChange={(e) => {
                         setActiveCategory(e.target.value)
-                        // Test();
+                        
 
                     }
 

@@ -8,12 +8,6 @@ export const Aside = ({ handleChange1, value, checked, handleChange_checkbox, ch
     const [open, setopen] = useState(true)
 
 
-
-
-
-    // const handlechangeRange = (e) => {
-    //     set_val_range(e.target.value)
-    // }
     return open ? (
 
         <main>
@@ -71,21 +65,6 @@ export const Aside = ({ handleChange1, value, checked, handleChange_checkbox, ch
                         <label for="volume">Volume ={valRange}</label>
                     </div> */}
                 </ol>
-                {/* <ol>
-                    test 1
-                </ol>
-                <ol>
-                    test 1
-                </ol>
-                <ol>
-                    test 1
-                </ol>
-                <ol>
-                    test 1
-                </ol>
-                <ol>
-                    test 1
-                </ol> */}
             </ul>
 
 

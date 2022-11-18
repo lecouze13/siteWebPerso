@@ -10,7 +10,7 @@ function Footer() {
 
 
             <img src={logo} alt='pasta la vista' className='logo' />
-            Tous droits réservés © Lorenzo geano, Marseille | 2020 / 2021
+            Tous droits réservés © Lorenzo geano, Marseille | 2020 -2022
 
         </footer >)
 

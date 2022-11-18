@@ -67,14 +67,16 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
         axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API/poids")
             .then((response) => { SettestNode(response.data) });
 
+
         setTimeout(() => {
             setload_tab(true);
         }, 4000);
 
+       
+
+
 
     }, []);
-
-
 
 
 

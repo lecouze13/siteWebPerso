@@ -15,8 +15,5 @@ function pasta_items({ name, cover, id, price }) {
         ))
 
 }
-// function click(pastaName) {
-//     alert(`Tu selectionne ${pastaName}`)
 
-// }
 export default pasta_items
