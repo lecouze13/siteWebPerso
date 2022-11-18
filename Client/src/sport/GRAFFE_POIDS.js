@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-
+import { Dots, ProgressBar } from 'loading-animations-react';
 import './GRAFFE_POIDS.css'
 
 import React from 'react';
@@ -59,14 +59,21 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
     // }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
 
-
+    const [load_tab, setload_tab] = useState(false)
 
     const [testNode, SettestNode] = useState([])
 
     useEffect(() => {
         axios.get("https://lorenzo-geano-sport-app.herokuapp.com/API/poids")
             .then((response) => { SettestNode(response.data) });
+
+
+        setTimeout(() => {
+            setload_tab(true);
+        }, 4000);
+
        
+
 
 
     }, []);
@@ -79,9 +86,8 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
 
 
 
-
     return (
-        <div>
+        load_tab ? (<div className='global'>
 
             <h1> Courbe de la masse corporelle </h1>
             <ResponsiveContainer width="100%" aspect={2.5}>
@@ -93,7 +99,7 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
                 >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="date" />
-                    <YAxis type='number' domain={[30, 70]} />
+                    <YAxis type='number' domain={[65, 75]} />
                     <Tooltip />
                     <Legend />
                     <Line
@@ -105,7 +111,17 @@ export const GRAFFE_POIDS = ({ Poids_input }) => {
 
                 </LineChart>
             </ResponsiveContainer>
-        </div>
+        </div>) : (
+            <div className='loading'>
+
+                <ProgressBar
+                    borderColor="#293131"
+                    sliderColor="#fff"
+                    sliderBackground="lightblue"
+                    text=""
+                />
+            </div>)
+
 
     );
 }

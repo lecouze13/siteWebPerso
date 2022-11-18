@@ -30,10 +30,14 @@
 
 .div1 {
   grid-area: 1 / 1 / 5 / 2;
+  margin-top: 64px;
+  position: fixed;
+  height: 337px;
 }
 
 .div2 {
   grid-area: 1 / 2 / 2 / 6;
+  margin-top: 80px
 }
 
 .div3 {

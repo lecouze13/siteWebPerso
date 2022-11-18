@@ -9,6 +9,12 @@ p.recharts-tooltip-label {
     color: black;
 }
 
+
+.loading {
+    margin: auto;
+    margin-top: 25%;
+}
+
 /* @media(max-width: 1000px) {
 
     svg.recharts-surface,

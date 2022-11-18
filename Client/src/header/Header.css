@@ -29,10 +29,17 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
-    border-bottom: 2px solid;
+    border-bottom: 2px solid #e5e5e573;
     align-items: center;
     height: 65px;
+    position: fixed;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    background: #293131;
 }
 
 .connecter_div {
@@ -118,7 +125,7 @@ main {
         display: none;
     }
 
-    .connecter_container {}
+
 
     .button_deco {
         width: 83px;
